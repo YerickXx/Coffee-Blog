@@ -1,0 +1,328 @@
+:root{
+    --heading-font:'PT Sans',sans-serif;
+    --paragraph-font:'Open sans', sans-serif;
+
+    /*colors*/
+    --primary:#784D3C;
+    --white:#FFF;
+    --black:#000;
+    --grey:#e1e1e1;
+}
+
+/* settings */
+.html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--paragraph-font);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* globals */
+
+.container{
+    width: min(90%, 120rem);
+    margin: auto auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 2.2rem;
+    text-align: center;
+ }
+
+h4{
+    font-size: 1.8rem;
+    margin-top: 7rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* utilities */
+
+.no-margin{
+    margin:0
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.center-text{
+    text-align: center;
+}
+
+/*  working with Header */
+
+.header{
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__text{
+    text-align: center;
+    color:var(--white);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px){ 
+   .header__text{
+    margin-top: 15rem;
+   }
+}
+
+/* working bar block*/
+
+.bar{
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px){ 
+   .bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+}
+
+/* working logo block*/
+
+.Logo{
+    color:var(--white);
+
+}
+
+.Logo__name{
+    font-weight: 400;
+}
+
+.Logo__bold{
+    font-weight: 700;
+}
+
+/* Working Navigation block*/
+
+@media (min-width: 786px){ 
+   .Navigation{
+    display: flex;
+    gap:2rem;
+   }
+}
+
+.Navigation__link{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color:var(--white);
+}
+
+
+/* Working main-content*/
+
+@media (min-width: 768px){ 
+   .main-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+   }
+}
+
+/* working the entrance blog*/
+
+.entrance{
+    border-bottom: 1px solid var(--grey) ;
+    margin-bottom: 2rem;
+}
+
+.button{
+    display: block;
+    font-family: var(--heading-font);
+    color:var(--white);
+    text-align: center;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border:none;
+}
+
+.entrance:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px){ 
+   .button{
+    display: inline-block;
+   }
+}
+
+.button:hover{
+    cursor:pointer;
+}
+
+.button--primary{
+    background-color: var(--black);
+}
+
+/* Working the aside == courses*/
+
+.button--secondary{
+    background-color: var(--primary);
+}
+
+.courses{
+    list-style: none;
+}
+
+.widget-courses{
+    border-bottom: 1px solid var(--grey);
+    margin-bottom: 2rem;
+}
+.widget-courses:last-of-type{
+    border:none;
+    margin-bottom: 0;
+}
+
+.widget-courses__label
+{
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+.widget-courses__info{
+    font-weight: 400;
+}
+
+.widget-courses__label,
+.widget-courses__info{
+    font-size: 1.7rem;
+}
+
+/* working footer*/
+
+.footer{
+    font-family: var(--heading-font);
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+    justify-content: space-evenly;
+    padding:2rem;
+    font-size: 1.8rem;
+    font-style: bold;
+}
+
+
+.footer__link{
+    color:var(--white);
+}
+
+.footer__link span{
+    color:var(--primary);
+}
+
+
+/* WORKING ABOUT US SECTION*/
+@media (min-width: 768px){  
+
+   .About-us{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   column-gap: 2rem;
+}
+}
+
+/* WORKING WITH CURSO.HTML*/
+
+.course{
+    padding:3rem 0;
+    border-bottom: 1px solid var(--grey)
+}
+
+.course:last-of-type{
+    border:none;
+}
+@media (min-width: 768px){
+    .course{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    } 
+   
+}
+.course__info{
+    font-weight: 400;
+}
+
+.course__label{
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+.course__label,
+.course__info{
+    font-size: 2rem;
+}
+
+/* Working Contacto.html*/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.formulario {
+    background-color: var(--grey);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    border-radius: 1rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+    margin-top: 2rem;
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+.campo__field--textarea {
+    height: 20rem;
+}
